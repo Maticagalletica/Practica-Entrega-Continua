@@ -10,6 +10,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
+      - name: Debug - Check Docker username
+        run: |
+          echo "Docker username length: ${#DOCKER_USERNAME}"
+          echo "First char: ${DOCKER_USERNAME:0:1}"
+          echo "Tag will be: $DOCKER_USERNAME/php-hola-mundo:latest"
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       
