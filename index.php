@@ -1,2 +1,2 @@
 <?php
-echo "¡Hola Mundo, desde Docker con PHP!";
+echo "¡Hola Mundo! Bienvenido a mi aplicación PHP en Docker.";
